@@ -3,6 +3,7 @@ package com.example.dell.appracadog.home.view;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
+import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
@@ -18,18 +19,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.example.dell.appracadog.R;
 import com.example.dell.appracadog.adapter.RecyclerViewAdapter;
+import com.example.dell.appracadog.databinding.ActivityHomeBinding;
 import com.example.dell.appracadog.home.model.CategoryResponse;
 import com.example.dell.appracadog.home.viewmodel.HomeViewModel;
 import com.example.dell.appracadog.interfaces.ItemOnClickListener;
 import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements ItemOnClickListener {
 
-//    ActivityHomeBinding mBinding;
+    ActivityHomeBinding mBinding;
     private String category;
     private RecyclerViewAdapter adapter;
     private RecyclerView recyclerView;
@@ -45,7 +49,7 @@ public class HomeActivity extends AppCompatActivity implements ItemOnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_home);
 
         initAssets();
 
@@ -88,10 +92,11 @@ public class HomeActivity extends AppCompatActivity implements ItemOnClickListen
     }
 
     private void initAssets() {
-//        recyclerView = mBinding.recyclerId;
-        recyclerView = findViewById(R.id.recycler_id);
-       expandedImage = findViewById(R.id.image_dog);
-        bgView = findViewById(R.id.container_id);
+        recyclerView = mBinding.recyclerId;
+//        recyclerView = findViewById(R.id.recycler_id);
+        expandedImage = mBinding.imageDog;
+        bgView = mBinding.containerId;
+//        bgView = findViewById(R.id.container_id);
         viewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
 
 
@@ -100,12 +105,12 @@ public class HomeActivity extends AppCompatActivity implements ItemOnClickListen
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
-        button1 = findViewById(R.id.btn_husky);
-        button2 = findViewById(R.id.btn_hound);
-        button3 = findViewById(R.id.btn_pug);
-        button4 = findViewById(R.id.btn_labrador);
-
-        }
+        button1 = mBinding.btnHusky;
+//                findViewById(R.id.btn_husky);
+        button2 = mBinding.btnHound;
+        button3 = mBinding.btnPug;
+        button4 = mBinding.btnLabrador;
+    }
 
     @Override
     public void onClick(String url) {
@@ -122,7 +127,7 @@ public class HomeActivity extends AppCompatActivity implements ItemOnClickListen
         expandedImage.setVisibility(View.VISIBLE);
     }
 
-    public void hideImage(){
+    public void hideImage() {
         expandedImage.setVisibility(View.GONE);
         bgView.setVisibility(View.GONE);
     }
