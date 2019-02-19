@@ -1,0 +1,26 @@
+package com.example.dell.appracadog.adapter;
+
+import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
+import android.arch.persistence.room.Insert;
+import android.arch.persistence.room.OnConflictStrategy;
+import android.arch.persistence.room.Query;
+import android.arch.persistence.room.Update;
+import com.example.dell.appracadog.home.model.CategoryResponse;
+import io.reactivex.Flowable;
+
+@Dao
+public interface CategoryDAO {
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insert(CategoryResponse categoryResponse);
+
+    @Update
+    void update(CategoryResponse categoryResponse);
+
+    @Delete
+    void delete(CategoryResponse categoryResponse);
+
+    @Query("Select * from Categories")
+    Flowable<CategoryResponse> getAll();
+}
