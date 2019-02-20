@@ -55,6 +55,7 @@ public class SignUpActivity extends AppCompatActivity {
                     if (!aBoolean) {
                         if (currentUser != null) {
                             startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
+                            this.finish();
                         } else {
                             Toast.makeText(SignUpActivity.this, "Registrando", Toast.LENGTH_SHORT).show();
                         }

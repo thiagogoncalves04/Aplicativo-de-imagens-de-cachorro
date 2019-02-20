@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_husky"
+        android:icon="@drawable/husky_icon_black"
+        android:title="hound" />
+
+    <item
+        android:id="@+id/navigation_labrador"
+        android:icon="@drawable/icon_labrador"
+        android:title="labrador"/>
+
+    <item
+        android:id="@+id/navigation_pug"
+        android:icon="@drawable/icon_pug"
+        android:title="pug"/>
+
+    <item
+        android:id="@+id/navigation_hound"
+        android:icon="@drawable/hound_icon"
+        android:title="husky"/>
+
+</menu>

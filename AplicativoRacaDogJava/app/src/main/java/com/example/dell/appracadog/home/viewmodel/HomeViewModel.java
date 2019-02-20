@@ -4,10 +4,20 @@ import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.SharedPreferences;
+import android.databinding.ObservableField;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
 import com.example.dell.appracadog.database.Database;
 import com.example.dell.appracadog.home.model.CategoryResponse;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observable;
+
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
