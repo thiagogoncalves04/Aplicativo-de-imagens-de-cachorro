@@ -102,21 +102,21 @@ public class HomeActivity extends AppCompatActivity implements ItemOnClickListen
             switch (menuItem.getItemId()) {
                 case R.id.navigation_labrador: {
                     hideImage();
-                    category = "labrador";
-                    textCategory.setText(category.toLowerCase());
+                    category = "Labrador";
+                    textCategory.setText(category);
                     viewModel.getCategory(category.toLowerCase());
                     break;
                 }
                 case R.id.navigation_hound: {
                     hideImage();
-                    category = "hound";
+                    category = "Hound";
                     textCategory.setText(category);
                     viewModel.getCategory(category.toLowerCase());
                     break;
                 }
                 case R.id.navigation_pug: {
                     hideImage();
-                    category = "pug";
+                    category = "Pug";
                     textCategory.setText(category);
                     viewModel.getCategory(category.toLowerCase());
 
@@ -124,7 +124,7 @@ public class HomeActivity extends AppCompatActivity implements ItemOnClickListen
                 }
                 case R.id.navigation_husky: {
                     hideImage();
-                    category = "husky";
+                    category = "Husky";
                     textCategory.setText(category);
                     viewModel.getCategory(category.toLowerCase());
                     break;

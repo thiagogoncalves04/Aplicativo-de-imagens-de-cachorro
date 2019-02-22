@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">AppRacaDog</string>
     <string name="imagem_cao">Imagem_cao</string>
-    <string name="Husky">husky</string>
-    <string name="Hound">hound</string>
-    <string name="Pug">pug</string>
-    <string name="Labrador">labrador</string>
+    <string name="Husky">Husky</string>
+    <string name="Hound">Hound</string>
+    <string name="Pug">Pug</string>
+    <string name="Labrador">Labrador</string>
 </resources>
