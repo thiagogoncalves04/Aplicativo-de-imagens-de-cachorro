@@ -47,7 +47,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            dogImage = itemView.findViewById(R.id.imagem_dog_id);
+           dogImage = itemView.findViewById(R.id.imagem_dog_id);
         }
 
         public void bind(String url) {
